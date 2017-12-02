@@ -2,7 +2,7 @@
 
 #define DOF 3
 #define NUM_STATE_VARS 3
-typedef float state3Type;
+typedef double state3Type;
 
 #define OPTIMIZE_SPEED
 
@@ -21,7 +21,7 @@ void runState3()
 	/*------------------------------------
 	* Setup the UKF
 	*------------------------------------*/
-	UnscentedKalmanFilter<state3Type, NUM_STATE_VARS> UKF(true);
+	UnscentedKalmanFilter<state3Type, NUM_STATE_VARS> UKF(false);
 	
 	/* Merwe Sigma Points Constants Setup */
 	UKF.Merwe->alpha = 0.5;

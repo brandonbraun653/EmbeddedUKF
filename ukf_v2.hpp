@@ -343,15 +343,15 @@ template<typename mType, int _StateVars, int _SigmaPts>
 		if (enhanceSpeed)
 		{
 			//Initial state and covariance matrices
-			//mResultOpt->Xk = Input->X.template cast<float>();
-			//mResultOpt->Pk = Input->P.template cast<float>();
-			//
-			////Other major matrices
-			//mInputOpt->A = Input->A.template cast<float>();
-			//mInputOpt->B = Input->B.template cast<float>();
-			//mInputOpt->Q = Input->A.template cast<float>();
-			//mInputOpt->R = Input->B.template cast<float>();
-			//mInputOpt->H = Input->A.template cast<float>();
+			mResultOpt->Xk = Input->X.template cast<float>();
+			mResultOpt->Pk = Input->P.template cast<float>();
+			
+			//Other major matrices
+			mInputOpt->A = Input->A.template cast<float>();
+			mInputOpt->B = Input->B.template cast<float>();
+			mInputOpt->Q = Input->A.template cast<float>();
+			mInputOpt->R = Input->B.template cast<float>();
+			mInputOpt->H = Input->A.template cast<float>();
 		}
 		else
 		{

@@ -19,7 +19,7 @@ void runState12()
 	/*------------------------------------
 	* Setup the UKF
 	*------------------------------------*/
-	UnscentedKalmanFilter<state12Type, NUM_STATE_VARS> UKF;
+	UnscentedKalmanFilter<state12Type, NUM_STATE_VARS> UKF(true);
 	
 	/* Merwe Sigma Points Constants Setup */
 	UKF.Merwe->alpha = 0.5;

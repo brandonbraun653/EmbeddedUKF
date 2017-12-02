@@ -20,15 +20,15 @@
 #include "state9.h"
 #include "state12.h"
 
-#define TEST_3_STATE
+//#define TEST_3_STATE
 //#define TEST_6_STATE
 //#define TEST_9_STATE
-//#define TEST_12_STATE
+#define TEST_12_STATE
 
 int main(void)
 {
 	HAL_Init();
-	SystemClockConfig();
+	ThorSystemClockConfig();
 	InitializeSamplingProfiler();
 	InitializeInstrumentingProfiler();
 	

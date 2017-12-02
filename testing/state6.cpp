@@ -2,7 +2,7 @@
 
 #define DOF 3
 #define NUM_STATE_VARS 6
-typedef float state6Type;
+typedef double state6Type;
 
 void runState6()
 {
@@ -19,7 +19,7 @@ void runState6()
 	/*------------------------------------
 	* Setup the UKF
 	*------------------------------------*/
-	UnscentedKalmanFilter<state6Type, NUM_STATE_VARS> UKF;
+	UnscentedKalmanFilter<state6Type, NUM_STATE_VARS> UKF(true);
 	
 	/* Merwe Sigma Points Constants Setup */
 	UKF.Merwe->alpha = 0.5;
